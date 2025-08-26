@@ -1,0 +1,33 @@
+import random
+
+def rand_num(x):
+    random_number=random.randint(2,x)
+
+    while True:
+        user=int(input(f"Enetr the number between 2 to {x}: "))
+        if user<random_number:
+            print("your number is low")
+        elif user>random_number:
+            print("you guess more than random numnber")
+        elif user==random_number:
+            print("bhoom, you guess right dude.")
+            break
+        else:
+            print("Enter number only. dont")
+rand_num(x=int(input("enter the limit: ")))
+
+# the below also same game but few changes with code
+
+
+def guess_num(x):
+    random_number=random.randint(1,x)
+
+    guess=0
+    while guess!=random_number:
+        guess=int(input(f"Enetr the number between1 to {x}: "))
+        if guess < random_number:
+            print("dude, you guess low")
+        elif guess > random_number:
+            print("dude, you guess more")
+    print(f"brooo,you guess right damn.your numnber is  {guess} which == random number that also {random_number} ")
+guess_num(20)
